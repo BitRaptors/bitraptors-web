@@ -2,65 +2,88 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <title>BitRaptors</title>
+    <title>BitRaptors</title>
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
-      <a class="navbar-brand" href="./index.html">
-        <img class="raptor-logo-top hidden" alt="BitRaptors logo" src="./public/images/raptor-logo.png" /> Bit<b>Raptors</b>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <a class="navbar-brand" href="./index.html">
+                <img class="raptor-logo-top hidden" alt="BitRaptors logo" src="./public/images/raptor-logo.png" /> Bit<b>Raptors</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="./another-page.html">About Us</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./contact-us.html">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./another-page.html">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <main role="main" class="content">
+    <main role="main" class="content">
 
-    <section class="hero-header">
-      <div class="container-fluid">
+        <section class="hero-header">
+            <div class="container-fluid">
 
-        <div class="row" style="max-width: 1200px; margin-left:auto; margin-right: auto;">
-          <div class="col-12 mx-auto text-center">
-            <br><br><br><br><br>
-            <h2>Contact us</b></h2>
-          </div>
-          <div class="col-12 text-center mt-3 mb-5">
-            <iframe src="https://info755024.typeform.com/to/lOibER" height="450px"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div class="row" style="max-width: 1200px; margin-left:auto; margin-right: auto;">
+                    <div class="col-12 mx-auto text-center">
+                        <br><br><br><br><br>
+                        <h2>Contact us</b>
+                        </h2>
+                    </div>
+                    <div class="col-12 text-center mt-3 mb-5">
+                        <iframe src="https://info755024.typeform.com/to/lOibER" height="450px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- /END THE FEATURETTES -->
-    <!-- /.container -->
+        <!-- /END THE FEATURETTES -->
+        <!-- /.container -->
 
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>
-        &copy; 2020 Bitraptors, Inc.
-      </p>
-    </footer>
-  </main>
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>
+                &copy; 2020 Bitraptors, Inc.
+            </p>
+        </footer>
+    </main>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAPjD2qIoR91C2whiE6rSi8hmNvxCw21ok",
+            authDomain: "bitraptors-web.firebaseapp.com",
+            databaseURL: "https://bitraptors-web.firebaseio.com",
+            projectId: "bitraptors-web",
+            storageBucket: "bitraptors-web.appspot.com",
+            messagingSenderId: "175580559177",
+            appId: "1:175580559177:web:a8cc254fb4f7186cb14c98",
+            measurementId: "G-QRMWWDGBQZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </body>
 
 </html>
