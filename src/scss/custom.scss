@@ -156,6 +156,7 @@ section {
 }
 
 #accordion .btn {
+  pointer-events: none;
   color: $base-color;
   display: block;
   text-align: left;
