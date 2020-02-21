@@ -14,7 +14,7 @@
   "scripts": {
     "build": "webpack -p --progress --mode production --config webpack.config.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "cp CNAME dist & gh-pages -d dist",
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --open --config webpack.config.js",
     "lint": "eslint src/js",
     "lint:fix": "npm run lint -- --fix",

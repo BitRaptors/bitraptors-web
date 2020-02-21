@@ -3,27 +3,25 @@
 $base-color: #033039;
 $background-color: #E9F3F5;
 
-$base-font: "HKGrotesk";
-
-// Your customize CSS
+$base-font: "HKGrotesk", "Helvetica", "Arial";
 
 @font-face {
-  font-family: $base-font;
-  src: url("../public/fonts/hkgrotesk-bold.otf");
+  font-family: "HKGrotesk";
+  src: url("../public/fonts/hkgroteskbold.woff");
   font-weight: bold;
-}
+  }
 
-@font-face {
-  font-family: $base-font;
-  src: url("../public/fonts/hkgrotesk-light.woff");
+  @font-face {
+  font-family: "HKGrotesk";
+  src: url("../public/fonts/hkgrotesklight.woff");
   font-weight: light;
-}
+  }
 
-@font-face {
-  font-family: $base-font;
-  src: url("../public/fonts/hkgrotesk-regular.woff");
+  @font-face {
+  font-family: "HKGrotesk";
+  src: url("../public/fonts/hkgroteskregular.woff");
   font-weight: regular;
-}
+  }
 
 main {
     width: 100%;
