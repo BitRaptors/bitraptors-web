@@ -105,14 +105,18 @@ section {
     width: 40px !important;
     height: 40px !important;
     object-fit: cover;
+}
+.navbar-brand{
     opacity: 1;
+    width: 140px;
+    overflow: hidden;
 
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-.raptor-logo-top.hidden {
+.navbar-brand.hidden {
     width: 0px !important;
     opacity: 0;
 }
@@ -277,6 +281,20 @@ section {
 }
 .pull-left{
     transform:translate(-100%, 0);
+}
+
+
+
+// Team
+.team-img {
+  max-width: 130px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s linear;
+  border: 5px solid #E9F3F5;
+  box-shadow: -5px 5px 10px #d9e2e4, 5px -5px 10px #ffffff;
+  margin-top: 32px;
+}
+.team-img:hover {
+  transform: scale(2);
 }
 
 /* Small devices (landscape phones, 576px and up) */

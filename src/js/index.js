@@ -9,9 +9,9 @@ $('#alert').click(() => {
 $(window).scroll(function() {
   var a = $(window).scrollTop();
   if (a < 200) {
-    $('.raptor-logo-top').addClass('hidden');
+    $('.navbar-brand').addClass('hidden');
   } else {
-    $('.raptor-logo-top').removeClass('hidden');
+    $('.navbar-brand').removeClass('hidden');
   }
   console.log(a);
 });
