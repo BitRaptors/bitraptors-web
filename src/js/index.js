@@ -1,6 +1,15 @@
 import 'bootstrap';
+import simpleParallax from 'simple-parallax-js';
 
 import '../scss/index.scss';
+
+var image = document.getElementsByClassName('hero-phone');
+new simpleParallax(image, {
+  orientation: 'up',
+  overflow: true,
+  delay: 0.6,
+  transition: 'cubic-bezier(0,0,0,1)',
+});
 
 $('#alert').click(() => {
   alert('jQuery works!');
@@ -12,6 +21,13 @@ $(window).scroll(function() {
     $('.navbar-brand').addClass('hidden');
   } else {
     $('.navbar-brand').removeClass('hidden');
+  }
+  var color = $('.color');
+  var bottom = color.offset().top + color.outerHeight();
+  if (color.offset().top - a < 40 && bottom - a > 40) {
+    $('.navbar').addClass('navbar-dark');
+  } else {
+    $('.navbar').removeClass('navbar-dark');
   }
 });
 

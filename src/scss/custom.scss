@@ -104,13 +104,20 @@ section {
   margin: 37px 26px 29px 26px;
 }
 .raptor-logo-top {
-    width: 40px !important;
-    height: 40px !important;
-    object-fit: cover;
+  width: 48px !important;
+  height: 35px !important;
+  margin-top: -3px;
+  background-image: url(../public/images/raptor-logo.png); 
+  background-size: cover;
+  float: left;
+  object-fit: cover;
+}
+.navbar-dark .raptor-logo-top {
+  background-image: url(../public/images/raptor-logo-white.png); 
 }
 .navbar-brand{
     opacity: 1;
-    width: 140px;
+    width: 142px;
     overflow: hidden;
 
     -webkit-transition: all 0.2s ease-out;
@@ -166,7 +173,6 @@ section {
   text-align: left;
   padding-left: 16px;
   font-size: large;
-  font-weight: 600;
 }
 
 #accordion p {
@@ -207,6 +213,7 @@ section {
   height: 125%;
   background-size: contain;
   background-image: url(../public/images/iphonex.png);
+  background-repeat: no-repeat;
 }
 
 .playButton {
