@@ -107,13 +107,13 @@ section {
   width: 48px !important;
   height: 35px !important;
   margin-top: -3px;
-  background-image: url(../public/images/raptor-logo.png); 
+  background-image: url(../public/images/raptorlogo.png); 
   background-size: cover;
   float: left;
   object-fit: cover;
 }
 .navbar-dark .raptor-logo-top {
-  background-image: url(../public/images/raptor-logo-white.png); 
+  background-image: url(../public/images/raptorlogowhite.png); 
 }
 .navbar-brand{
     opacity: 1;
@@ -240,10 +240,9 @@ section {
 }
 
 .left-1 {
-  position: absolute;
   left: 0%;
-  width: 36%;
-  top: 0%;
+  width: 37%;
+  top: 2%;
   z-index: 3;
 }
 
@@ -253,6 +252,13 @@ section {
   width: 33%;
   top: 4%;
   z-index: 2;
+}
+.baby .left-2 {
+  transform: rotate(-90deg); bottom: 15%; top: unset;
+}
+
+.baby .left-3 {
+  transform: rotate(-100deg); bottom: 45%; left: 50%; top: unset;
 }
 
 .left-3 {
@@ -312,11 +318,17 @@ section {
 /* Medium devices (tablets, 768px and up) */
 @include media-breakpoint-down(md) {
 
+    .work {
+      margin-bottom: 48px;
+    }
     .pull-right{
         transform:translate(0, 0);
     }
     .pull-left{
         transform:translate(0, 0);
+    }
+    .left-1 {
+      margin-top: 4%;
     }
     
   .hero-phone-holder {
