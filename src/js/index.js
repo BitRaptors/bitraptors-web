@@ -28,15 +28,18 @@ $(window).scroll(function() {
   } else {
     $('.navbar-brand').removeClass('hidden');
   }
+  var darkNavBar = false;
   $('.color').each(function() {
     var color = $(this);
     var bottom = color.offset().top + color.outerHeight();
-    if (color.offset().top - a < 40 && bottom - a > 40) {
-      $('.navbar').addClass('navbar-dark');
-    } else {
-      $('.navbar').removeClass('navbar-dark');
-    }
+
+    if (color.offset().top - a < 40 && bottom - a > 40) darkNavBar = true;
   });
+  if (darkNavBar) {
+    $('.navbar').addClass('navbar-dark');
+  } else {
+    $('.navbar').removeClass('navbar-dark');
+  }
 });
 
 $('.iphoneX.video').click(function(e) {
@@ -50,6 +53,15 @@ $('.iphoneX.video').click(function(e) {
     video.pause();
     playButton.removeClass('hidden');
   }
+});
+$('.iphoneX.video').each(function() {
+  var target = $(this);
+  var video = target.find('video').get(0);
+  var playButton = target.find('.playButton');
+  video.onplay = function(e) {
+    console.log($(e.target));
+    playButton.addClass('hidden');
+  };
 });
 
 $(document).ready(function() {

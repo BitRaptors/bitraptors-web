@@ -282,11 +282,11 @@ section {
 }
 
 .iphoneX:hover {
-    z-index: 99;
-    transform: scale(1.03) translate(0, -1%) rotate(1deg);
+    //z-index: 99;
+    transform: scale(1.05) translate(20%, -1%) rotate(1deg);
 }
-.iphoneX.video:hover {
-    z-index: 99;
+.iphoneX.video:hover, .iphoneX.left-1:hover {
+    //z-index: 99;
     transform: scale(1) translate(0, 0) rotate(0deg);
 }
 
@@ -342,6 +342,15 @@ section {
 .color p,
 .color .btn-link {
   color: white;
+}
+
+::selection {
+  background: $base-color;
+  color: $background-color;
+}
+::-moz-selection {
+  background: $base-color;
+  color: $background-color;
 }
 
 .color small {
