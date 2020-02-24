@@ -21,6 +21,19 @@ $('#alert').click(() => {
   alert('jQuery works!');
 });
 
+var inside = target => {
+  var a = $(window).scrollTop();
+  var bottom = target.offset().top + target.outerHeight();
+
+  return target.offset().top - a < 40 && bottom - a > 40;
+};
+
+var insideWindow = target => {
+  var a = $(window).scrollTop();
+  var bottom = target.offset().top + target.outerHeight();
+  return target.offset().top - window.innerHeight - a < 40 && bottom - a > 40;
+};
+
 $(window).scroll(function() {
   var a = $(window).scrollTop();
   if (a < 200) {
@@ -31,15 +44,27 @@ $(window).scroll(function() {
   var darkNavBar = false;
   $('.color').each(function() {
     var color = $(this);
-    var bottom = color.offset().top + color.outerHeight();
-
-    if (color.offset().top - a < 40 && bottom - a > 40) darkNavBar = true;
+    if (inside(color)) darkNavBar = true;
   });
   if (darkNavBar) {
     $('.navbar').addClass('navbar-dark');
   } else {
     $('.navbar').removeClass('navbar-dark');
   }
+
+  $('.iphoneX.video').each(function() {
+    var target = $(this);
+    var video = target.find('video').get(0);
+    if (insideWindow(target)) {
+      if (video.paused) {
+        video.play();
+      }
+    } else {
+      if (!video.paused) {
+        video.pause();
+      }
+    }
+  });
 });
 
 $('.iphoneX.video').click(function(e) {
@@ -58,8 +83,7 @@ $('.iphoneX.video').each(function() {
   var target = $(this);
   var video = target.find('video').get(0);
   var playButton = target.find('.playButton');
-  video.onplay = function(e) {
-    console.log($(e.target));
+  video.onplay = function() {
     playButton.addClass('hidden');
   };
 });
