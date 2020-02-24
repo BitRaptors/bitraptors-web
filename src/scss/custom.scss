@@ -1,6 +1,7 @@
 @import './style.css';
 
 $base-color: #033039;
+$primary-color: #033039;
 $background-color: #E9F3F5;
 
 $base-font: "HKGrotesk", "Helvetica", "Arial";
@@ -50,6 +51,20 @@ h6 {
 iframe {
     width: 100%;
     border: 0;
+}
+
+a {
+  color: $base-color;
+}
+
+.rounded {
+  border-radius: 1.25rem !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .navbar-light .navbar-toggler {
@@ -129,6 +144,10 @@ section {
     width: 0px !important;
     opacity: 0;
 }
+.navbar-brand.hidden.dontHide {
+    width: 142px !important;
+    opacity: 1 !important;
+}
 
 
 .neomorph {
@@ -186,6 +205,38 @@ section {
   width: 110px;
 }
 
+.macbook {
+  margin: 6%;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  display: inline-block;
+
+  -webkit-transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+
+.macbook img,
+.macbook video {
+  max-height: 600px;
+  object-fit: cover;
+}
+
+.macbook:after {
+  content: "";
+  position: absolute;
+  top: -7.4%;
+  left: -16%;
+  width: 205%;
+  height: 144%;
+  background-size: contain;
+  background-image: url(../public/images/macbook.png);
+  background-repeat: no-repeat;
+}
+
+
 .iphoneX {
   margin: 6%;
   width: fit-content;
@@ -239,6 +290,10 @@ section {
     transform: scale(1) translate(0, 0) rotate(0deg);
 }
 
+.click-disabled {
+  pointer-events: none;
+}
+
 .left-1 {
   left: 0%;
   width: 36%;
@@ -283,6 +338,7 @@ section {
 .color h3,
 .color h4,
 .color h5,
+.color h6,
 .color p {
   color: white;
 }

@@ -94,3 +94,15 @@ $(document).ready(function() {
   window.addEventListener('resize', lazyLoad);
   window.addEventListener('orientationchange', lazyLoad);
 });
+
+window.copyToClipboard = (element, target) => {
+  target.innerHTML = 'Email copied!';
+  setInterval(function() {
+    target.innerHTML = 'Copy email';
+  }, 1500);
+  var $temp = $('<input>');
+  $('body').append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand('copy');
+  $temp.remove();
+};
