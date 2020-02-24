@@ -32,4 +32,8 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: cp CNAME dist
-      - run: gh-pages -d dist
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
