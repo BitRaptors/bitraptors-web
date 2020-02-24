@@ -10,6 +10,12 @@ new simpleParallax(image, {
   delay: 0.6,
   transition: 'cubic-bezier(0,0,0,1)',
 });
+new simpleParallax(document.getElementsByClassName('macbook'), {
+  orientation: 'up',
+  overflow: true,
+  delay: 0.2,
+  transition: 'cubic-bezier(0,0,0,1)',
+});
 
 $('#alert').click(() => {
   alert('jQuery works!');
