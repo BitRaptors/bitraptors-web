@@ -22,13 +22,15 @@ $(window).scroll(function() {
   } else {
     $('.navbar-brand').removeClass('hidden');
   }
-  var color = $('.color');
-  var bottom = color.offset().top + color.outerHeight();
-  if (color.offset().top - a < 40 && bottom - a > 40) {
-    $('.navbar').addClass('navbar-dark');
-  } else {
-    $('.navbar').removeClass('navbar-dark');
-  }
+  $('.color').each(function() {
+    var color = $(this);
+    var bottom = color.offset().top + color.outerHeight();
+    if (color.offset().top - a < 40 && bottom - a > 40) {
+      $('.navbar').addClass('navbar-dark');
+    } else {
+      $('.navbar').removeClass('navbar-dark');
+    }
+  });
 });
 
 $('.iphoneX.video').click(function(e) {
@@ -86,6 +88,7 @@ $(document).ready(function() {
       }, 200);
     }
   };
+  lazyLoad();
 
   document.addEventListener('scroll', lazyLoad);
   window.addEventListener('resize', lazyLoad);

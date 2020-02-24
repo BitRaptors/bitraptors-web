@@ -107,7 +107,7 @@ section {
   width: 48px !important;
   height: 35px !important;
   margin-top: -3px;
-  background-image: url(../public/images/raptorlogo.png); 
+  background-image: url("../public/images/raptorlogo.png"); 
   background-size: cover;
   float: left;
   object-fit: cover;
@@ -219,9 +219,9 @@ section {
 .playButton {
   pointer-events: none;
   position: absolute;
-  top: 40%;
-  margin-left: 30%;
-  width: 90px;
+  top: 43%;
+  margin-left: 33.5%;
+  width: 33%;
   z-index: 2;
   opacity: .8;
 }
@@ -318,6 +318,13 @@ section {
 /* Medium devices (tablets, 768px and up) */
 @include media-breakpoint-down(md) {
 
+  .baby .left-2 {
+    transform: rotate(-90deg); bottom: -15%; top: unset;
+  }
+  
+  .baby .left-3 {
+    transform: rotate(-100deg); bottom: 25%; left: 50%; top: unset;
+  }
     .work {
       margin-bottom: 48px;
     }
