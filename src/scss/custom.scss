@@ -379,7 +379,14 @@ section {
 }
 
 /* Small devices (landscape phones, 576px and up) */
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+  .navbar {
+    background-color: $background-color;
+  }
+  .navbar-dark {
+    background-color: $base-color;
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @include media-breakpoint-down(md) {
