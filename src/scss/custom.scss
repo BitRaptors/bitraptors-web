@@ -74,12 +74,13 @@ a {
 
 .navbar {
   opacity: 1;
-  transition: visibility 0.3s linear, opacity 0.3s linear;
-  background-color: $background-color;
+  transition: visibility 0.3s linear, opacity 0.3s linear, all   0.2s linear ;
+  background: linear-gradient(180deg, $background-color 60%,rgba(255,255,255,0) 100%);
+
 }
 
 .navbar-dark {
-  background-color: $base-color;
+  background: linear-gradient(180deg, $base-color 60%,rgba(0,0,0,0) 100%);
 }
 
 .hidden {
