@@ -75,6 +75,11 @@ a {
 .navbar {
   opacity: 1;
   transition: visibility 0.3s linear, opacity 0.3s linear;
+  background-color: $background-color;
+}
+
+.navbar-dark {
+  background-color: $base-color;
 }
 
 .hidden {
@@ -380,12 +385,6 @@ section {
 
 /* Small devices (landscape phones, 576px and up) */
 @include media-breakpoint-down(sm) {
-  .navbar {
-    background-color: $background-color;
-  }
-  .navbar-dark {
-    background-color: $base-color;
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
