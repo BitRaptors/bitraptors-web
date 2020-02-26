@@ -373,14 +373,16 @@ section {
 
 // Team
 .team-img {
-  max-width: 130px;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
   transition: transform 0.2s ease-in-out, opacity 0.2s linear;
   border: 5px solid #E9F3F5;
   box-shadow: -5px 5px 10px #d9e2e4, 5px -5px 10px #ffffff;
   margin-top: 32px;
 }
 .team-img:hover {
-  transform: scale(2);
+  transform: scale(1.5);
 }
 
 /* Small devices (landscape phones, 576px and up) */
