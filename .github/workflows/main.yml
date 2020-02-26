@@ -37,3 +37,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: bitraptors.com
+          
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        with:
+          ftp-server: ftp://lretpyie.loginssl.com/
+          ftp-username: admin@bitraptors.com
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build
+          git-ftp-args: --dry-run
