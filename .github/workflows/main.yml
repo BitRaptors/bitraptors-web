@@ -41,7 +41,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
-          ftp-server: ftp://lretpyie.loginssl.com/
+          ftp-server: ftp://lretpyie.loginssl.com/public_html
           ftp-username: admin@bitraptors.com
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist
