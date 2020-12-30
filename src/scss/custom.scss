@@ -113,8 +113,9 @@ section {
 }
 
 .hero-phone-holder {
-  max-height: 450px;
+  max-height: 380px;
   padding-top: 16px;
+  z-index: 9999;
 }
 
 .hero-phone {
@@ -128,6 +129,13 @@ section {
   top:0;
   left: 0;
   right: 0;
+}
+.raptor-logo-img {
+  width: 255px;
+  @include media-breakpoint-down(sm) {
+    width: 155px;
+  }
+
 }
 .raptor-logo-top {
   width: 48px !important;
@@ -162,6 +170,9 @@ section {
 .header {
   width: max-content;
   height: 420px;
+  @include media-breakpoint-down(sm) {
+    height: 340px;
+  }
   position: relative;
   -webkit-animation: pulse 120s linear infinite;
 }
@@ -187,6 +198,10 @@ section {
  
 .headerApp {
   width:140px;
+  @include media-breakpoint-down(sm) {
+    width: 100px;
+    margin-top:-40px;
+  }
   float: left;
 }
 
@@ -448,14 +463,8 @@ section {
     }
     
   .hero-phone-holder {
-    max-height: none;
+    height: 220px;
     padding-top: 0px;
-  }
-
-  .hero-phone {
-    max-width: 90% !important;
-    height: auto;
-    margin-left: -5% !important;
   }
 
   .hero-text {
