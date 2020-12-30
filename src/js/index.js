@@ -89,6 +89,10 @@ $('.iphoneX.video').each(function() {
 });
 
 $(document).ready(function() {
+  $('.headerApps')
+    .clone()
+    .appendTo('.header');
+
   let lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
   let lazyVideos = [].slice.call(document.querySelectorAll('video.lazy'));
   let active = false;

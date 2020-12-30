@@ -53,6 +53,10 @@ iframe {
     border: 0;
 }
 
+.badge-dark {
+  background-color: rgba(0,0,0,0.2);
+}
+
 a {
   color: $base-color;
 }
@@ -90,6 +94,10 @@ p {
   color: $base-color;
 }
 
+.top-0 {
+  top: 0;
+}
+
 .content {
   position: absolute;
   top: 0;
@@ -104,24 +112,22 @@ section {
   /* background: linear-gradient(180deg, #E9F3F5 0%, #E9F3F5 60%); */
 }
 
-.hero-text {
-  margin-top: 5%;
-  margin-left: -5%;
-  margin-bottom: 52px;
-}
-
 .hero-phone-holder {
   max-height: 450px;
-  padding-top: 36px;
+  padding-top: 16px;
 }
 
 .hero-phone {
   max-height: 760px;
+  margin-top:-40px;
 }
 
 .raptor-logo {
-  max-width: 70px !important;
-  margin: 37px 26px 29px 26px;
+  margin: auto auto;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
 }
 .raptor-logo-top {
   width: 48px !important;
@@ -153,7 +159,36 @@ section {
     width: 142px !important;
     opacity: 1 !important;
 }
+.header {
+  width: max-content;
+  height: 420px;
+  position: relative;
+  -webkit-animation: pulse 120s linear infinite;
+}
+.headerApps {
+  padding-top: 115px;
+  padding-bottom: 300px;
+  width: max-content;
+  float: left;
 
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: translateX(0%);
+  }
+  99% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+ }
+ 
+.headerApp {
+  width:140px;
+  float: left;
+}
 
 .neomorph {
   position: relative;
