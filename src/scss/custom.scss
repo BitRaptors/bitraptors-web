@@ -188,7 +188,7 @@ section {
   0% {
     transform: translateX(0%);
   }
-  99% {
+  99.999% {
     transform: translateX(-50%);
   }
   100% {
@@ -465,6 +465,9 @@ section {
   .hero-phone-holder {
     height: 220px;
     padding-top: 0px;
+  }
+  .hero-phone {
+    margin-top: 40px;
   }
 
   .hero-text {
