@@ -308,6 +308,7 @@ section {
 .iphoneX img,
 .iphoneX video {
   max-height: 600px;
+  border-radius: 20px;
 }
 
 .iphoneX:after {
@@ -336,7 +337,7 @@ section {
   opacity: 1;
 }
 
-.iphoneX:hover {
+.iphoneX:hover, .left-2:hover, .left-3:hover {
     //z-index: 99;
     transform: scale(1.05) translate(20%, -1%) rotate(1deg);
 }
@@ -350,10 +351,11 @@ section {
 }
 
 .left-1 {
+  position: relative;
   left: 0%;
   width: 36%;
   top: 2%;
-  z-index: 3;
+  z-index: 99;
 }
 
 .left-2 {
@@ -361,7 +363,7 @@ section {
   left: 32%;
   width: 33%;
   top: 4%;
-  z-index: 2;
+  z-index: 1;
 }
 .baby .left-2 {
   transform: rotate(-90deg); bottom: 15%; top: unset;
@@ -376,7 +378,33 @@ section {
   left: 60%;
   width: 30%;
   top: 8%;
-  z-index: 1;
+  z-index: 0;
+}
+
+.heartbit .left-1 {
+  width: 44%;
+}
+.heartbit .left-2 {
+  width: 41%;
+}
+.heartbit .left-3 {
+  width: 38%;
+}
+
+.heartbit .device {
+  position: absolute;
+  bottom: 70px;
+  left: -50px;
+  z-index: 99;
+  width: 250px;
+}
+
+.left-2, .left-3 {
+
+  -webkit-transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
 .work {
@@ -449,18 +477,24 @@ section {
   .baby .left-3 {
     transform: rotate(-100deg); bottom: 25%; left: 50%; top: unset;
   }
-    .work {
-      margin-bottom: 48px;
-    }
-    .pull-right{
-        transform:translate(0, 0);
-    }
-    .pull-left{
-        transform:translate(0, 0);
-    }
-    .left-1 {
-      margin-top: 4%;
-    }
+  .work {
+    margin-bottom: 48px;
+  }
+  .pull-right{
+      transform:translate(0, 0);
+  }
+  .pull-left{
+      transform:translate(0, 0);
+  }
+  .left-1:not(.custom) {
+    margin-top: 4%;
+  }
+  .heartbit .device {
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
     
   .hero-phone-holder {
     height: 220px;
