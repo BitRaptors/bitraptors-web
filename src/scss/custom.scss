@@ -107,6 +107,10 @@ section {
   background-color: $background-color;
 }
 
+.bg-light {
+  background-color: $background-color !important;
+}
+
 .hero-header {
   background: $background-color;
   /* background: linear-gradient(180deg, #E9F3F5 0%, #E9F3F5 60%); */
@@ -237,19 +241,6 @@ section {
   margin-top: 20px;
   max-width: 758px !important;
   width: 90%;
-}
-
-#accordion .btn {
-  pointer-events: none;
-  color: $base-color;
-  display: block;
-  text-align: left;
-  padding-left: 16px;
-  font-size: large;
-}
-
-#accordion p {
-  margin-left: 40px;
 }
 
 .charmander {
@@ -410,8 +401,20 @@ section {
   min-height: 600px;
 }
 
+.workWithUsLogo {
+  position: absolute !important;
+  top: 10%;
+  right: 5%;
+  width: 125px;
+  z-index: 2;
+}
+
 
 .color {
+  background-color: $base-color;
+}
+
+.color2 {
   background-color: $base-color;
 }
 
@@ -460,6 +463,14 @@ section {
 }
 .team-img:hover {
   transform: scale(1.5);
+}
+.card-header {
+  background-color: #EEF7F8;
+}
+
+button:focus {
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.0) !important;
 }
 
 /* Small devices (landscape phones, 576px and up) */

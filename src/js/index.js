@@ -42,7 +42,7 @@ $(window).scroll(function() {
     $('.navbar-brand').removeClass('hidden');
   }
   var darkNavBar = false;
-  $('.color').each(function() {
+  $('.color, .color2').each(function() {
     var color = $(this);
     if (inside(color)) darkNavBar = true;
   });
