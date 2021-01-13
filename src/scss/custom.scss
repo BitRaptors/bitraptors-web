@@ -403,7 +403,8 @@ section {
 
 .workWithUsLogo {
   position: absolute !important;
-  top: 10%;
+  
+  bottom: -20px;
   right: 5%;
   width: 125px;
   z-index: 2;
@@ -475,6 +476,7 @@ button:focus {
 
 /* Small devices (landscape phones, 576px and up) */
 @include media-breakpoint-down(sm) {
+
 }
 
 /* Medium devices (tablets, 768px and up) */
