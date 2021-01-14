@@ -4,25 +4,26 @@ $base-color: #033039;
 $primary-color: #033039;
 $background-color: #E9F3F5;
 
+
 $base-font: "HKGrotesk", "Helvetica", "Arial";
 
 @font-face {
   font-family: "HKGrotesk";
   src: url("../public/fonts/hkgroteskbold.woff");
   font-weight: bold;
-  }
+}
 
-  @font-face {
+@font-face {
   font-family: "HKGrotesk";
   src: url("../public/fonts/hkgrotesklight.woff");
   font-weight: light;
-  }
+}
 
-  @font-face {
+@font-face {
   font-family: "HKGrotesk";
   src: url("../public/fonts/hkgroteskregular.woff");
   font-weight: regular;
-  }
+}
 
 main {
     width: 100%;
@@ -467,12 +468,36 @@ section {
 }
 .card-header {
   background-color: #EEF7F8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 button:focus {
   outline: 0 !important;
   box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.0) !important;
 }
+
+
+
+.collapsible-link {
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+
+.collapsible-link svg {
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%) rotate(0deg);
+  display: block;
+  font-size: 1.1rem;
+  transition: .3s transform;
+}
+
+.collapsible-link[aria-expanded='true'] svg {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @include media-breakpoint-down(sm) {

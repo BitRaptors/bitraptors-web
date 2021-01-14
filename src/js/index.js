@@ -1,5 +1,7 @@
 import 'bootstrap';
 import simpleParallax from 'simple-parallax-js';
+import '../../node_modules/@fortawesome/fontawesome-free/js/solid.js';
+import '../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js';
 
 import '../scss/index.scss';
 
