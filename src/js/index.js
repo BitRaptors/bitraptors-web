@@ -40,8 +40,10 @@ $(window).scroll(function() {
   var a = $(window).scrollTop();
   if (a < 200) {
     $('.navbar-brand').addClass('hidden');
+    $('.navbar').addClass('hidden');
   } else {
     $('.navbar-brand').removeClass('hidden');
+    $('.navbar').removeClass('hidden');
   }
   var darkNavBar = false;
   $('.color, .color2').each(function() {
@@ -94,6 +96,10 @@ $(document).ready(function() {
   $('.headerApps')
     .clone()
     .appendTo('.header');
+  $('.header')
+    .clone()
+    .insertBefore('.header')
+    .addClass('blurred');
 
   let lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
   let lazyVideos = [].slice.call(document.querySelectorAll('video.lazy'));
