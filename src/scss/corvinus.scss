@@ -1,0 +1,114 @@
+
+
+// CORVINUS
+
+
+$corvinus-primary-color: #14499E;
+$yellow: #F5C832;
+
+.corvinus {
+  .navbar {
+    background-color: #EEEFF3;
+  }
+  .navbar-dark {
+    background-color: $corvinus-primary-color;
+  }
+
+  section {
+
+    background-color: #EEEFF3;
+  }
+  
+  .color {
+    background-color: $corvinus-primary-color;
+  }
+  .casestudy-container {
+    height: 100vh;
+    z-index: 10;
+    min-height: 720px;
+    background: conic-gradient(from 90deg at 63.82% 100%, rgba(252, 253, 255, 0) -21.86deg, #FFFFFF 187.42deg, rgba(253, 253, 255, 0.231247) 268.43deg, rgba(252, 253, 255, 0) 338.14deg, #FFFFFF 547.42deg);
+
+    background-image: url(../public/images/corvinus/caseStudy/backgroundElements/topleft.svg), url(../public/images/corvinus/caseStudy/backgroundElements/topright.svg), url(../public/images/corvinus/caseStudy/backgroundElements/middlecircle.svg);
+    background-position: top left, 90% 50%, center 25%;
+    background-repeat: no-repeat;
+  }
+  .crew {
+    z-index: 9;
+  }
+  .vertical-center {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+
+  .agile {
+    .agile-image {
+      position: absolute;
+      left: 0;
+      top:50%;
+      transform: translate(0%, -50%);
+    }
+  }
+
+
+  .story {
+    z-index: 8;
+  }
+  .story .balbasz {
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translate(0%, -50%);
+  }
+  
+  .scope {
+    background-color: white;
+  }
+  
+  .design {
+    z-index: 999;
+    pointer-events: none;
+  }
+  .design:hover {
+    opacity: 0;
+  }
+
+  .phone {
+    overflow: hidden;
+    border-radius: 44px;
+
+    position: relative;
+    background: linear-gradient(to bottom, #EFEFEF, #FFF);
+    padding: 10px;
+    box-shadow: 0px 40px 120px rgba(6, 16, 53, 0.2);
+    img {
+      border-radius: 40px;
+    }
+  }
+  .phone.small {
+    border-radius: 30px;
+    padding: 6px;
+    img {
+      border-radius: 28px;
+
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900 !important;
+    color: $corvinus-primary-color !important;
+  }
+  .color {
+    
+  h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+  }
+  }
+  .yellow {
+    color: $yellow;
+  }
+
+
+
+}

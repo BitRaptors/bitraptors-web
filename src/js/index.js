@@ -5,24 +5,6 @@ import '../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js';
 
 import '../scss/index.scss';
 
-var image = document.getElementsByClassName('hero-phone');
-new simpleParallax(image, {
-  orientation: 'up',
-  overflow: true,
-  delay: 0.6,
-  transition: 'cubic-bezier(0,0,0,1)',
-});
-new simpleParallax(document.getElementsByClassName('macbook'), {
-  orientation: 'up',
-  overflow: true,
-  delay: 0.2,
-  transition: 'cubic-bezier(0,0,0,1)',
-});
-
-$('#alert').click(() => {
-  alert('jQuery works!');
-});
-
 var inside = target => {
   var a = $(window).scrollTop();
   var bottom = target.offset().top + target.outerHeight();
@@ -92,7 +74,22 @@ $('.iphoneX.video').each(function() {
   };
 });
 
-$(document).ready(function() {
+$(document).ready(function() {});
+
+window.copyToClipboard = (element, target) => {
+  target.innerHTML = 'Email copied!';
+  setInterval(function() {
+    target.innerHTML = 'Copy email';
+  }, 1500);
+  var $temp = $('<input>');
+  $('body').append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand('copy');
+  $temp.remove();
+};
+
+var i1, i2, parallax1, parallax2, parallax3;
+$(function() {
   $('.headerApps')
     .clone()
     .appendTo('.header');
@@ -139,6 +136,10 @@ $(document).ready(function() {
           }
         });
         active = false;
+
+        // i1.refresh();
+        // i2.refresh();
+        // i3.refresh();
       }, 200);
     }
   };
@@ -147,16 +148,46 @@ $(document).ready(function() {
   document.addEventListener('scroll', lazyLoad);
   window.addEventListener('resize', lazyLoad);
   window.addEventListener('orientationchange', lazyLoad);
-});
 
-window.copyToClipboard = (element, target) => {
-  target.innerHTML = 'Email copied!';
-  setInterval(function() {
-    target.innerHTML = 'Copy email';
-  }, 1500);
-  var $temp = $('<input>');
-  $('body').append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand('copy');
-  $temp.remove();
-};
+  var image = document.getElementsByClassName('hero-phone');
+  i1 = new simpleParallax(image, {
+    orientation: 'up',
+    overflow: true,
+    delay: 0.6,
+    transition: 'cubic-bezier(0,0,0,1)',
+  });
+  i2 = new simpleParallax(document.getElementsByClassName('macbook'), {
+    orientation: 'up',
+    overflow: true,
+    delay: 0.2,
+    transition: 'cubic-bezier(0,0,0,1)',
+  });
+
+  parallax1 = new simpleParallax(document.getElementsByClassName('parallax1'), {
+    orientation: 'up',
+    overflow: true,
+    scale: 1.6,
+    transition: 'cubic-bezier(0,0,0,1)',
+  });
+  parallax2 = new simpleParallax(document.getElementsByClassName('parallax2'), {
+    orientation: 'up',
+    overflow: true,
+    scale: 1.4,
+    transition: 'cubic-bezier(0,0,0,1)',
+  });
+  parallax3 = new simpleParallax(document.getElementsByClassName('parallax3'), {
+    orientation: 'up',
+    overflow: true,
+    scale: 1.8,
+    transition: 'cubic-bezier(0,0,0,1)',
+  });
+
+  setTimeout(function() {
+    //for some reason simpleparallax doesnt update itself before..
+    i1.refresh();
+    i2.refresh();
+    parallax1.refresh();
+    parallax2.refresh();
+    parallax3.refresh();
+  }, 1000);
+});

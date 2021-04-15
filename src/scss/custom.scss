@@ -1,4 +1,5 @@
 @import './style.css';
+@import './corvinus.scss';
 
 $base-color: #033039;
 $primary-color: #033039;
@@ -601,3 +602,13 @@ button:focus {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @include media-breakpoint-up(xl) {}
+
+
+
+.transparent-10 { opacity: .1 }
+.transparent-30 { opacity: .3 }
+.transparent-50 { opacity: .5 }
+.transparent-80 { opacity: .8 }
+
+.send-to-back { z-index: -1;}
+.send-to-front { z-index: 999;}
