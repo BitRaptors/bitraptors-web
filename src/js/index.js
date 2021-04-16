@@ -52,6 +52,12 @@ $(window).scroll(function() {
     }
   });
 });
+console.log($('#splashVideo'));
+$('#splashVideo').on('ended', function() {
+  $('#headerCol1').removeClass('centered');
+  $('#headerCol2').removeClass('transparent');
+  $('#headerCol3').removeClass('transparent');
+});
 
 $('.iphoneX.video').click(function(e) {
   var target = $(e.target);

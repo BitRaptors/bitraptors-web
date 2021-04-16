@@ -10,6 +10,19 @@ $yellow: #F5C832;
   .navbar {
     background-color: #EEEFF3;
   }
+  .corvinus-header {
+
+    .centered {
+      transform: translateX(70%);
+    }
+  }
+  #headerCol1, #headerCol2, #headerCol3 {
+    transition: transform .5s ease-out, opacity .5s ease-out;
+  }
+  #headerCol2, #headerCol3 {
+    transition-delay: .5s;
+  }
+
   .navbar-dark {
     background-color: $corvinus-primary-color;
   }
@@ -84,6 +97,9 @@ $yellow: #F5C832;
     padding: 10px;
     box-shadow: 0px 40px 120px rgba(6, 16, 53, 0.2);
     img {
+      border-radius: 40px;
+    }
+    video {
       border-radius: 40px;
     }
   }
