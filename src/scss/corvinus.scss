@@ -168,5 +168,15 @@ $background-color: #EEEFF3;
   .bg-primary {
     background-color: $corvinus-primary-color !important;
   }
+  .btn-light {
+    border-width: 2px;
+    border-radius: 8px;
+  }
+  .btn-light:hover {
+    color: $corvinus-primary-color;
+    background-color: #fff;
+    border-color: $corvinus-primary-color;
+    border-width: 2px;
+  }
 
 }
