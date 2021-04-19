@@ -17,11 +17,12 @@
   <link rel="preload" as="font" href="../public/fonts/hkgroteskregular.woff" type="font/woff" crossorigin="anonymous">
   
   <script src="../public/parallax.js"></script>
-  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="corvinus">
   <header>
-    <nav class="navbar hidden navbar-expand-md navbar-light fixed-top navbar-dark">
+    <nav class="navbar hidden navbar-expand-md navbar-light fixed-top">
       <a class="navbar-brand  hidden" href="./index.html">
 
       <div class="raptor-logo-top"></div> Bit<b>Raptors</b>
@@ -44,21 +45,28 @@
   </header>
 
   <main role="main" class="content">
-
+    <div class="preloader">
+      <h3 class="content">
+        Loading...
+      </h3>
+    </div>
     <!-- <img class="img-fluid position-absolute transparent-10 design" src="./public/images/corvinus/caseStudy.png"> -->
     <section class="corvinus-header">
       <div class="caseStudy-container pt-5">
         <div class="container position-relative">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-5 centered" id="headerCol1">
-              <div class="phone parallax1">
-                <video preload="none" poster="./public/images/corvinus/caseStudy/home.png" autoplay class="video img-fluid " id="splashVideo" >
+          <div class="row mx-md-5 align-items-center justify-content-center">
+            <div class="col-5 push-right" id="headerCol1">
+              <div class="phone video parallax1">
+
+                <img class="playButton lazy transparent" alt="Play button" src="./public/images/transparent.png"
+                data-src="./public/images/play.png">
+                <video poster="./public/images/corvinus/caseStudy/home.png" autoplay class="img-fluid " id="splashVideo" >
                   <source src="./public/images/corvinus/caseStudy/splash.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
-            <div class="col-1 transparent centered" id="headerCol2"></div>
-            <div class="col-6 pb-5 parallax1 transparent centered" id="headerCol3">
+            <div class="col-1 transparent push-right" id="headerCol2"></div>
+            <div class="col-6 pb-5 parallax1 transparent push-right" id="headerCol3">
               <img src="./public/images/transparent.png" width="150px" class="ml-n4 lazy" data-src="./public/images/corvinus/caseStudy/logo.png">
               <h1 class="display-4">Corvinus Mobilapp</h1>
               
@@ -128,7 +136,7 @@
     <section>
       <div class="crew position-relative">
         <div class="container py-5 parallax1">
-          <div class="row mx-5 align-items-center">
+          <div class="row mx-md-5 align-items-center">
             <div class="col-12">
               <h1 class="display-4">The Crew</h1>
               <p>
@@ -162,7 +170,7 @@
 
       <div class="story position-relative">
         <div class="container py-5 parallax1">
-          <div class="row mx-5 align-items-center">
+          <div class="row mx-md-5 align-items-center">
             <div class="col-12 mb-3">
               <h1 class="display-4">The Story of the Team</h1>
               <p>
@@ -183,7 +191,7 @@
 
       <div class="scope position-relative">
         <div class="container py-5 parallax1">
-          <div class="row mx-5 align-items-center">
+          <div class="row mx-md-5 align-items-center">
             <div class="col-9">
               <h1 class="display-4">The Giant Scope</h1>
               <p>
@@ -214,7 +222,7 @@
 
       <div class="agile position-relative">
         <div class="container py-5 parallax1 send-to-front">
-          <div class="row mx-5 align-items-center">
+          <div class="row mx-md-5 align-items-center">
             <div class="col-4">
             </div>
             <div class="col-8">
@@ -232,7 +240,7 @@
       </div>
 
       <div class="dashboard px-5 color position-relative">
-        <div class="container-fluid py-5">
+        <div class="container py-5">
           <div class="row align-items-center mb-4">
             <div class="col-6">
               <h1 class="display-3">🔔</h1>

@@ -5,22 +5,17 @@
 
 $corvinus-primary-color: #14499E;
 $yellow: #F5C832;
+$background-color: #EEEFF3;
 
 .corvinus {
   .navbar {
-    background-color: #EEEFF3;
+    background-color: $background-color;
   }
-  .corvinus-header {
-
-    .centered {
-      transform: translateX(70%);
-    }
+  .push-right {
+    transform: translateX(70%) !important;
   }
   #headerCol1, #headerCol2, #headerCol3 {
-    transition: transform .5s ease-out, opacity .5s ease-out;
-  }
-  #headerCol2, #headerCol3 {
-    transition-delay: .5s;
+    transition: transform 1s cubic-bezier(0,0,.24,1), opacity 1s cubic-bezier(0,0,.24,1);
   }
 
   .navbar-dark {
@@ -28,8 +23,7 @@ $yellow: #F5C832;
   }
 
   section {
-
-    background-color: #EEEFF3;
+    background-color: $background-color;
   }
   
   .color {
@@ -96,12 +90,24 @@ $yellow: #F5C832;
     background: linear-gradient(to bottom, #EFEFEF, #FFF);
     padding: 10px;
     box-shadow: 0px 40px 120px rgba(6, 16, 53, 0.2);
+    line-height: 0;
+
     img {
       border-radius: 40px;
     }
     video {
       border-radius: 40px;
     }
+  }
+  .phone:after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    right: 9px;
+    left: 9px;
+    border: #efefef 2px solid;
+    border-radius: 40px;
   }
   .phone.small {
     border-radius: 30px;
@@ -111,6 +117,17 @@ $yellow: #F5C832;
 
     }
   }
+  .phone.small:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    border: #efefef 2px solid;
+    border-radius: 28px;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: 900 !important;
     color: $corvinus-primary-color !important;
@@ -125,6 +142,22 @@ $yellow: #F5C832;
     color: $yellow;
   }
 
-
+  .preloader {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $background-color;
+    z-index: 99;
+    transition: opacity .3s;
+    
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 
 }

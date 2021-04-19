@@ -2,6 +2,7 @@ import 'bootstrap';
 import simpleParallax from 'simple-parallax-js';
 import '../../node_modules/@fortawesome/fontawesome-free/js/solid.js';
 import '../../node_modules/@fortawesome/fontawesome-free/js/fontawesome.min.js';
+import { corvinus, corvinusLoaded } from './corvinus.js';
 
 import '../scss/index.scss';
 
@@ -52,35 +53,12 @@ $(window).scroll(function() {
     }
   });
 });
-console.log($('#splashVideo'));
-$('#splashVideo').on('ended', function() {
-  $('#headerCol1').removeClass('centered');
-  $('#headerCol2').removeClass('transparent');
-  $('#headerCol3').removeClass('transparent');
-});
 
-$('.iphoneX.video').click(function(e) {
-  var target = $(e.target);
-  var video = target.find('video').get(0);
-  var playButton = target.find('.playButton');
-  if (video.paused) {
-    video.play();
-    playButton.addClass('hidden');
-  } else {
-    video.pause();
-    playButton.removeClass('hidden');
+$(document).ready(function() {
+  if (document.URL.indexOf('corvinus') != -1) {
+    corvinus(playPause);
   }
 });
-$('.iphoneX.video').each(function() {
-  var target = $(this);
-  var video = target.find('video').get(0);
-  var playButton = target.find('.playButton');
-  video.onplay = function() {
-    playButton.addClass('hidden');
-  };
-});
-
-$(document).ready(function() {});
 
 window.copyToClipboard = (element, target) => {
   target.innerHTML = 'Email copied!';
@@ -188,6 +166,17 @@ $(function() {
     transition: 'cubic-bezier(0,0,0,1)',
   });
 
+  $('.iphoneX.video').click(playPause);
+
+  $('.iphoneX.video').each(function() {
+    var target = $(this);
+    var video = target.find('video').get(0);
+    var playButton = target.find('.playButton');
+    video.onplay = function() {
+      playButton.addClass('hidden');
+    };
+  });
+
   setTimeout(function() {
     //for some reason simpleparallax doesnt update itself before..
     i1.refresh();
@@ -195,5 +184,23 @@ $(function() {
     parallax1.refresh();
     parallax2.refresh();
     parallax3.refresh();
+
+    if (document.URL.indexOf('corvinus') != -1) {
+      corvinusLoaded();
+    }
   }, 1000);
 });
+
+function playPause(e) {
+  var target = $(e.currentTarget);
+  console.log(e);
+  var video = target.find('video').get(0);
+  var playButton = target.find('.playButton');
+  if (video.paused) {
+    video.play();
+    playButton.addClass('transparent');
+  } else {
+    video.pause();
+    playButton.removeClass('transparent');
+  }
+}

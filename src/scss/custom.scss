@@ -364,14 +364,11 @@ section {
   opacity: 1;
 }
 
-.iphoneX:hover, .left-2:hover, .left-3:hover {
+.iphoneX:not(.video):hover, .left-2:hover, .left-3:hover {
     //z-index: 99;
     transform: scale(1.05) translate(20%, -1%) rotate(1deg);
 }
-.iphoneX.video:hover, .iphoneX.left-1:hover {
-    //z-index: 99;
-    transform: scale(1) translate(0, 0) rotate(0deg);
-}
+
 
 .click-disabled {
   pointer-events: none;
@@ -613,3 +610,4 @@ button:focus {
 
 .send-to-back { z-index: -1;}
 .send-to-front { z-index: 999;}
+.no-pointer-events { pointer-events: none;}
