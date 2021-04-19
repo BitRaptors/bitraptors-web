@@ -25,14 +25,15 @@ export function corvinusLoaded() {
   $('body').removeClass('stop-scrolling');
 
   setTimeout(function() {
-    $('.preloader').addClass('transparent no-pointer-events');
     var playPromise = $('#splashVideo')
       .get(0)
       .play();
 
     if (playPromise !== undefined) {
       playPromise
-        .then(() => {})
+        .then(() => {
+          $('.preloader').addClass('transparent no-pointer-events');
+        })
         .catch(() => {
           //autoplay forbidden
           $('#headerCol1').removeClass('push-right');

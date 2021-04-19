@@ -72,7 +72,15 @@ window.copyToClipboard = (element, target) => {
   $temp.remove();
 };
 
-var i1, i2, parallax1, parallax2, parallax3;
+var i1,
+  i2,
+  parallaxn1,
+  parallaxn2,
+  parallax1,
+  parallax2,
+  parallax3,
+  parallaxl1,
+  parallaxl2;
 $(function() {
   $('.headerApps')
     .clone()
@@ -147,10 +155,28 @@ $(function() {
     transition: 'cubic-bezier(0,0,0,1)',
   });
 
+  parallaxn1 = new simpleParallax(
+    document.getElementsByClassName('parallaxn1'),
+    {
+      orientation: 'down',
+      overflow: true,
+      scale: 1.3,
+      transition: 'cubic-bezier(0,0,0,1)',
+    }
+  );
+  parallaxn2 = new simpleParallax(
+    document.getElementsByClassName('parallaxn2'),
+    {
+      orientation: 'down',
+      overflow: true,
+      scale: 1.6,
+      transition: 'cubic-bezier(0,0,0,1)',
+    }
+  );
   parallax1 = new simpleParallax(document.getElementsByClassName('parallax1'), {
     orientation: 'up',
     overflow: true,
-    scale: 1.6,
+    scale: 1.2,
     transition: 'cubic-bezier(0,0,0,1)',
   });
   parallax2 = new simpleParallax(document.getElementsByClassName('parallax2'), {
@@ -165,6 +191,25 @@ $(function() {
     scale: 1.8,
     transition: 'cubic-bezier(0,0,0,1)',
   });
+
+  parallaxl1 = new simpleParallax(
+    document.getElementsByClassName('parallaxl1'),
+    {
+      orientation: 'left',
+      overflow: true,
+      scale: 1.2,
+      transition: 'cubic-bezier(0,0,0,1)',
+    }
+  );
+  parallaxl2 = new simpleParallax(
+    document.getElementsByClassName('parallaxl2'),
+    {
+      orientation: 'left',
+      overflow: true,
+      scale: 1.4,
+      transition: 'cubic-bezier(0,0,0,1)',
+    }
+  );
 
   $('.iphoneX.video').click(playPause);
 
@@ -181,9 +226,13 @@ $(function() {
     //for some reason simpleparallax doesnt update itself before..
     i1.refresh();
     i2.refresh();
+    parallaxn1.refresh();
+    parallaxn2.refresh();
     parallax1.refresh();
     parallax2.refresh();
     parallax3.refresh();
+    parallaxl1.refresh();
+    parallaxl2.refresh();
 
     if (document.URL.indexOf('corvinus') != -1) {
       corvinusLoaded();
