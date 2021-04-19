@@ -12,7 +12,7 @@ $background-color: #EEEFF3;
     background-color: $background-color;
   }
   .push-right {
-    transform: translateX(70%) !important;
+    transform: translateX(100%) !important;
   }
   #headerCol1, #headerCol2, #headerCol3 {
     transition: transform 1s cubic-bezier(0,0,.24,1), opacity 1s cubic-bezier(0,0,.24,1);
@@ -53,7 +53,7 @@ $background-color: #EEEFF3;
     .agile-image {
       position: absolute;
       left: 0;
-      top:50%;
+      top:0;
       transform: translate(0%, -50%);
     }
   }

@@ -20,7 +20,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body class="corvinus">
+<body class="corvinus stop-scrolling">
   <header>
     <nav class="navbar hidden navbar-expand-md navbar-light fixed-top">
       <a class="navbar-brand  hidden" href="./index.html">
@@ -53,20 +53,20 @@
     <!-- <img class="img-fluid position-absolute transparent-10 design" src="./public/images/corvinus/caseStudy.png"> -->
     <section class="corvinus-header">
       <div class="caseStudy-container pt-5">
-        <div class="container position-relative">
-          <div class="row mx-md-5 align-items-center justify-content-center">
-            <div class="col-5 push-right" id="headerCol1">
+        <div class="container position-relative mt-5">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-4 push-right" id="headerCol1">
               <div class="phone video parallax1">
 
                 <img class="playButton lazy transparent" alt="Play button" src="./public/images/transparent.png"
-                data-src="./public/images/play.png">
+                data-src="./public/images/play.svg">
                 <video poster="./public/images/corvinus/caseStudy/home.png" autoplay class="img-fluid " id="splashVideo" >
                   <source src="./public/images/corvinus/caseStudy/splash.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
             <div class="col-1 transparent push-right" id="headerCol2"></div>
-            <div class="col-6 pb-5 parallax1 transparent push-right" id="headerCol3">
+            <div class="col-7 pb-5 parallax1 transparent push-right" id="headerCol3">
               <img src="./public/images/transparent.png" width="150px" class="ml-n4 lazy" data-src="./public/images/corvinus/caseStudy/logo.png">
               <h1 class="display-4">Corvinus Mobilapp</h1>
               
@@ -100,15 +100,15 @@
               </div>
               <div class="row mb-5  align-items-center">
                 <div class="col">
-                  <h1 class="mb-0">10 000</h1>
+                  <h1 class="mb-0" id="students">10000</h1>
                   <small>Yearly students</small>
                 </div>
                 <div class="col">
-                  <h1 class="mb-0">101</h1>
+                  <h1 class="mb-0" id="screens">101</h1>
                   <small>Screens designed</small>
                 </div>
                 <div class="col">
-                  <h1 class="mb-0">50+</h1>
+                  <h1 class="mb-0" id="students-test">50+</h1>
                   <small>Students worked with us</small>
                 </div>
               </div>
@@ -135,7 +135,7 @@
 
     <section>
       <div class="crew position-relative">
-        <div class="container py-5 parallax1">
+        <div class="container py-5">
           <div class="row mx-md-5 align-items-center">
             <div class="col-12">
               <h1 class="display-4">The Crew</h1>
@@ -169,7 +169,7 @@
       </div>
 
       <div class="story position-relative">
-        <div class="container py-5 parallax1">
+        <div class="container py-5">
           <div class="row mx-md-5 align-items-center">
             <div class="col-12 mb-3">
               <h1 class="display-4">The Story of the Team</h1>
@@ -190,8 +190,8 @@
       </div>
 
       <div class="scope position-relative">
-        <div class="container py-5 parallax1">
-          <div class="row mx-md-5 align-items-center">
+        <div class="container py-5">
+          <div class="row mx-md-5 py-5 align-items-center">
             <div class="col-9">
               <h1 class="display-4">The Giant Scope</h1>
               <p>
@@ -211,8 +211,7 @@
             <div class="col-3 ">
               <div class="vertical-center">
                 <div class="phone small parallax1">
-                  <img class="img-fluid lazy" alt="Corvinus Screenshot Redeem" src="./public/images/transparent.png"
-                    data-src="./public/images/corvinus/caseStudy/home-login.png" />
+                  <img class="img-fluid" alt="Corvinus Screenshot Redeem" src="./public/images/corvinus/caseStudy/home-login.png" />
                 </div>
               </div>
             </div>
@@ -220,8 +219,9 @@
         </div>
       </div>
 
-      <div class="agile position-relative">
-        <div class="container py-5 parallax1 send-to-front">
+      <div class="agile position-relative overflow-hidden">
+        <img src="./public/images/corvinus/caseStudy/agile.png" class="agile-image img-fluid px-3 parallax1" width="630px">
+        <div class="container py-5">
           <div class="row mx-md-5 align-items-center">
             <div class="col-4">
             </div>
@@ -236,7 +236,6 @@
             </div>
           </div>
         </div>
-        <img src="./public/images/corvinus/caseStudy/agile.png" class="agile-image img-fluid px-3" width="630px">
       </div>
 
       <div class="dashboard px-5 color position-relative">
@@ -256,13 +255,13 @@
             <div class="col-6 mt-n5">
               <div class="row align-items-center">
                 <div class="col-6 mt-5 ">
-                  <div class="phone small">
+                  <div class="phone small parallax1">
                     <img class="img-fluid lazy" alt="Corvinus Screenshot Redeem" src="./public/images/transparent.png"
                       data-src="./public/images/corvinus/caseStudy/home-login.png" />
                   </div>
                 </div>
                 <div class="col-6 mt-n5">
-                  <div class="phone small mt-n5">
+                  <div class="phone small mt-n5 parallax1">
                     <img class="img-fluid lazy" alt="Corvinus Screenshot Redeem" src="./public/images/transparent.png"
                       data-src="./public/images/corvinus/caseStudy/home-login.png" />
                   </div>
@@ -282,16 +281,16 @@
               </p>
             </div>
 
-            <div class="col-6 mt-n5">
+            <div class="col-6">
               <div class="row align-items-center">
                 <div class="col-6 mt-5 ">
-                  <div class="phone small">
+                  <div class="phone small parallax1">
                     <img class="img-fluid lazy" alt="Corvinus Screenshot Redeem" src="./public/images/transparent.png"
                       data-src="./public/images/corvinus/caseStudy/home-login.png" />
                   </div>
                 </div>
                 <div class="col-6 mt-n5">
-                  <div class="phone small mt-n5">
+                  <div class="phone small mt-n5 parallax1">
                     <img class="img-fluid lazy" alt="Corvinus Screenshot Redeem" src="./public/images/transparent.png"
                       data-src="./public/images/corvinus/caseStudy/home-login.png" />
                   </div>
