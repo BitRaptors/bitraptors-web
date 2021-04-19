@@ -36,10 +36,13 @@ export function corvinusLoaded() {
         })
         .catch(() => {
           //autoplay forbidden
-          $('#headerCol1').removeClass('push-right');
-          $('#headerCol2').removeClass('transparent push-right');
-          $('#headerCol3').removeClass('transparent push-right');
-          $('.phone.video .playButton').removeClass('transparent');
+          $('.preloader .content').text('Click to start');
+          $('.preloader').on('click', function() {
+            $('#splashVideo')
+              .get(0)
+              .play();
+            $('.preloader').addClass('transparent no-pointer-events');
+          });
         });
     }
 
