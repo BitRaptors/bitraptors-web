@@ -36,7 +36,9 @@ export function corvinusLoaded() {
         })
         .catch(() => {
           //autoplay forbidden
-          $('.preloader .content').text('Click to start');
+          $('.preloader .content').html(
+            '<ion-icon name="play-circle" class="mr-3 small"></ion-icon>Click to start'
+          );
           $('.preloader').on('click', function() {
             $('#splashVideo')
               .get(0)
