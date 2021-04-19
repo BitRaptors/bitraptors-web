@@ -15,7 +15,7 @@ export function corvinus(playPause) {
     $(window).scrollTop(0);
   });
 
-  students = new countUpModule.CountUp('students', 10000, { separator: ' ' });
+  students = new countUpModule.CountUp('students', 11500, { separator: ' ' });
   screens = new countUpModule.CountUp('screens', 101);
   studentsTest = new countUpModule.CountUp('students-test', 50, {
     suffix: '+',
