@@ -131,13 +131,13 @@ $background-color: #EEEFF3;
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: 900 !important;
-    color: $corvinus-primary-color !important;
+    color: $corvinus-primary-color;
   }
   .color {
     
-  h1, h2, h3, h4, h5, h6 {
-    color: white !important;
-  }
+    h1, h2, h3, h4, h5, h6 {
+      color: white !important;
+    }
   }
   .yellow {
     color: $yellow;
@@ -159,6 +159,14 @@ $background-color: #EEEFF3;
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+
+  .badge-primary {
+    color: #fff;
+    background-color: $corvinus-primary-color;
+  }
+  .bg-primary {
+    background-color: $corvinus-primary-color !important;
   }
 
 }
