@@ -1,3 +1,4 @@
+import 'slick-carousel';
 var countUpModule = require('countup.js');
 var students;
 var screens;
@@ -24,6 +25,10 @@ export function corvinus(playPause) {
 export function corvinusLoaded() {
   $('body').removeClass('stop-scrolling');
 
+  $('.carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 10000,
+  });
   setTimeout(function() {
     var playPromise = $('#splashVideo')
       .get(0)
