@@ -173,6 +173,12 @@ $background-color: #EEEFF3;
     }
   }
 
+  .feedback {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+  }
+
   .badge-primary {
     color: #fff;
     background-color: $corvinus-primary-color;
