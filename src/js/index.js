@@ -80,7 +80,9 @@ var i1,
   parallax2,
   parallax3,
   parallaxl1,
-  parallaxl2;
+  parallaxl2,
+  parallaxl3,
+  parallaxl4;
 $(function() {
   $('.headerApps')
     .clone()
@@ -160,8 +162,6 @@ $(function() {
     {
       orientation: 'down',
       overflow: true,
-      scale: 1.3,
-      transition: 'cubic-bezier(0,0,0,1)',
     }
   );
   parallaxn2 = new simpleParallax(
@@ -210,6 +210,24 @@ $(function() {
       transition: 'cubic-bezier(0,0,0,1)',
     }
   );
+  parallaxl3 = new simpleParallax(
+    document.getElementsByClassName('parallaxl3'),
+    {
+      orientation: 'left',
+      overflow: true,
+      scale: 1.6,
+      transition: 'cubic-bezier(0,0,0,1)',
+    }
+  );
+  parallaxl4 = new simpleParallax(
+    document.getElementsByClassName('parallaxl4'),
+    {
+      orientation: 'left',
+      overflow: true,
+      scale: 1.8,
+      transition: 'cubic-bezier(0,0,0,1)',
+    }
+  );
 
   $('.iphoneX.video').click(playPause);
 
@@ -233,6 +251,8 @@ $(function() {
     parallax3.refresh();
     parallaxl1.refresh();
     parallaxl2.refresh();
+    parallaxl3.refresh();
+    parallaxl4.refresh();
 
     if (document.URL.indexOf('corvinus') != -1) {
       corvinusLoaded();
