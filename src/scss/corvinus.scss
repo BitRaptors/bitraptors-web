@@ -13,6 +13,10 @@ $background-color: #EEEFF3;
   }
   .push-right {
     transform: translateX(100%) !important;
+    
+    @include media-breakpoint-down(sm) {
+      transform: translateX(0%) !important;
+    }
   }
   #headerCol1, #headerCol2, #headerCol3 {
     transition: transform 1s cubic-bezier(0,0,.24,1), opacity 1s cubic-bezier(0,0,.24,1);
@@ -26,6 +30,12 @@ $background-color: #EEEFF3;
     background-color: $background-color;
   }
   
+  .highlight {
+    background-color: $corvinus-primary-color;
+    color: white !important;
+    padding: 6px;
+    font-weight: bold;
+  }
   .color {
     background-color: $corvinus-primary-color;
     .highlight {
@@ -35,9 +45,8 @@ $background-color: #EEEFF3;
     }
   }
   .caseStudy-container {
-    height: 100vh;
     z-index: 10;
-    min-height: 720px;
+    min-height: 900px;
     background: conic-gradient(from 90deg at 63.82% 100%, rgba(252, 253, 255, 0) -21.86deg, #FFFFFF 187.42deg, rgba(253, 253, 255, 0.231247) 268.43deg, rgba(252, 253, 255, 0) 338.14deg, #FFFFFF 547.42deg);
 
     background-image: url(../public/images/corvinus/caseStudy/backgroundElements/topleft.svg), url(../public/images/corvinus/caseStudy/backgroundElements/topright.svg), url(../public/images/corvinus/caseStudy/backgroundElements/middlecircle.svg);
@@ -179,7 +188,7 @@ $background-color: #EEEFF3;
     left: -20px;
   }
   
-  .slick-slide { padding-right: 2rem; opacity: .3; transition: opacity .3s;}
+  .slick-slide { opacity: .3; transition: opacity .3s;}
   .slick-slide.slick-current { opacity: 1 !important;}
   .slick-prev:before, .slick-next:before { color: $corvinus-primary-color };
   .slick-dots li button:before { font-size: 8px; color: $corvinus-primary-color };
