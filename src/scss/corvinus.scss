@@ -178,10 +178,12 @@ $background-color: #EEEFF3;
     top: -20px;
     left: -20px;
   }
-  .slick-list{padding:0 10% 0 0;}
+  
   .slick-slide { padding-right: 2rem; opacity: .3; transition: opacity .3s;}
   .slick-slide.slick-current { opacity: 1 !important;}
   .slick-prev:before, .slick-next:before { color: $corvinus-primary-color };
+  .slick-dots li button:before { font-size: 8px; color: $corvinus-primary-color };
+  .slick-dots li.slick-active button:before { opacity: 1; }
   
 
   .text-primary {

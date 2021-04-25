@@ -28,6 +28,8 @@ export function corvinusLoaded() {
   $('.carousel').slick({
     autoplay: true,
     autoplaySpeed: 10000,
+    dots: true,
+    arrows: false,
   });
   setTimeout(function() {
     var playPromise = $('#splashVideo')
